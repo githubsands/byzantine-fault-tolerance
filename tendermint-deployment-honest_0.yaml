@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tendermint-deployment-honest
+  labels:
+    app: tendermint-deployment-honest
+spec:
+  replicas: 12
+  selector:
+    matchLabels:
+      app: tendermint-deployment-honest
+  template:
+    metadata:
+      labels:
+        app: tendermint-deployment-honest
+    spec:
+      containers:
+      - name: tendermint-deployment-honest
+        image: tendermint-deployment-honest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
