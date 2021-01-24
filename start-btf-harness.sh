@@ -3,7 +3,7 @@
 set -e
 
 log() {
-    echo "LOG - $(date) - centos-harnes: $1"
+    echo "LOG - $(date) - tendermint-harnes: $1"
 }
 
 SEEDNODEDIR=$(pwd)/seed-node
